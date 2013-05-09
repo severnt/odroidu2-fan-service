@@ -8,6 +8,15 @@ By default it understands that the maximum cpu temperature that can be achieved 
 so, knowning that we setted a limit of 80C where at 80C fan speed will be at max.
 
 
+Requirements:
+
+1.
+build-essential and git packages.
+sudo apt-get install build-essential git
+
+2. 
+ODROID-U2 running Ubuntu (will be extended to Android)
+FAN connected to the two pin header near the power jack
 
 
 To install:
