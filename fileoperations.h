@@ -25,6 +25,13 @@ int openfiles() {
 	return 0;
 }
 
+void closefiles(void) {
+	fflush(fp_fan);
+	fflush(fp_tmu);
+	fclose(fp_fan);
+	fclose(fp_tmu);
+}
+
 int gettemp() {
 	int ret;
 	fscanf(fp_tmu, "%d", &ret);
@@ -36,6 +43,8 @@ void setfan(int temperature) {
 	char to_write[3];
 	sprintf(to_write, "%d\n", temperature);
 	fputs(to_write, fp_fan);
+	fflush(fp_fan);
+	rewind(fp_fan);
 }
 
 
