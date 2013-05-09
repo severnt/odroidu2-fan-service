@@ -11,6 +11,20 @@
 FILE *fp_tmu;
 FILE *fp_fan;
 
+int openfiles() {
+	fp_tmu = fopen(TMU_PATH, "r");
+	if(!fp_tmu) {
+		printf("odroidu2-fan: cannot open tmu file: %s\n", TMU_PATH);
+		return 10;
+	}
+	fp_fan = fopen(FAN_PATH, "w");
+	if(!fp_fan) {
+		printf("odroidu2-fan: cannot open fan file: %s\n", FAN_PATH);
+		return 11;
+	}
+	return 0;
+}
+
 int gettemp() {
 	int ret;
 	fscanf(fp_tmu, "%d", &ret);
