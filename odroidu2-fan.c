@@ -26,6 +26,15 @@ void u2_service(void) {
 	 */
 
 	int target_pwm_value = 255 * temperature / 80;
+
+	if(target_pwm_value <= 0) {
+		target_pwm_value = 0;
+	}
+
+	if(target_pwm_value > 255) {
+		target_pwm_value = 255;
+	}
+
 	setfan(target_pwm_value);
 
 	closefiles();
