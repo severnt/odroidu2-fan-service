@@ -1,0 +1,24 @@
+This is a small C project for the ODROID-U2 Platform by Hardkernel.
+
+This will behave like a service running on background.
+
+It will check the current SoC temperature and based on that, set the FAN PWM controller on U2.
+
+By default it understands that the maximum cpu temperature that can be achieved without throttle is 85C,
+so, knowning that we setted a limit of 80C where at 80C fan speed will be at max.
+
+
+
+
+To install:
+
+# Clones only with the latest commit
+git clone --depth 1 https://github.com/mdrjr/odroidu2-fan-service.git
+
+cd odroidu2-fan-service
+
+# build
+make
+
+# Install upstart service and the program to /bin
+make usi
