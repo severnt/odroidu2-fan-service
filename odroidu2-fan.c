@@ -10,6 +10,7 @@
 #include <string.h>
 
 #include "odroidu2-fan.h"
+#include "fileoperations.h"
 
 int openfiles() {
 	fp_tmu = fopen(TMU_PATH, "r");
@@ -30,6 +31,8 @@ int main(int argc, char *argv[]) {
 	if(openfiles() != 0) {
 		return -1;
 	}
+
+	setfan(10);
 
 /*	if(fork() == 0) {
 		while(1) {
