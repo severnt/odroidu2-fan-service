@@ -5,7 +5,7 @@
  *      Author: mdrjr
  */
 
-#define	TMU_PATH "tmu"
-#define FAN_PATH "fan"
+#define	TMU_PATH "/sys/devices/platform/tmu/temperature"
+#define FAN_PATH "/sys/devices/platform/odroid-fan/pwm_duty"
 
 #define PROBES_PER_SECOND 1
