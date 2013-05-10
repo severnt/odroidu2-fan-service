@@ -41,7 +41,7 @@ int gettemp() {
 
 void setfan(int temperature) {
 	char to_write[3];
-	sprintf(to_write, "%d\n", temperature);
+	sprintf(to_write, "%d", temperature);
 	fputs(to_write, fp_fan);
 	fflush(fp_fan);
 	rewind(fp_fan);
