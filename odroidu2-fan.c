@@ -16,7 +16,7 @@ void u2_service(void) {
 
 	openfiles();
 
-	int temperature = gettemp() / 1000; // / 1000 because tmu on 3.8 reports temp with 000 extras.
+	int temperature = gettemp();
 
 	/*
 	 * For U2 FAN PWM it starts on 0 and max value is 255
