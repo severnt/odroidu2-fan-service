@@ -6,6 +6,6 @@
  */
 
 #define	TMU_PATH "/sys/devices/virtual/thermal/thermal_zone0/temp"
-#define FAN_PATH "/sys/devices/platform/odroid-fan/pwm_duty"
+#define FAN_PATH "/sys/devices/platform/odroidu2-fan/pwm_duty"
 
 #define PROBES_PER_SECOND 1
